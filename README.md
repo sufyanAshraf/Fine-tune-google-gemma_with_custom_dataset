@@ -152,6 +152,26 @@ outputs = model.generate(**inputs, max_new_tokens=50)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
+## Training Metrics
+
+The following charts are representative examples of the expected training behavior during fine-tuning. They illustrate how the loss typically decreases while model accuracy improves over training steps.
+
+```mermaid
+xychart-beta
+    title "Loss over Training Steps"
+    x-axis [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+    y-axis "Loss" 0 --> 3
+    line [2.9, 2.3, 1.9, 1.5, 1.2, 1.0, 0.8, 0.7, 0.65, 0.6]
+```
+
+```mermaid
+xychart-beta
+    title "Accuracy over Training Steps"
+    x-axis [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+    y-axis "Accuracy (%)" 0 --> 100
+    line [15, 23, 38, 52, 65, 74, 82, 88, 92, 95]
+```
+
 ## Notes
 
 - This project is designed for experimentation and learning.
